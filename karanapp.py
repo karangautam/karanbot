@@ -7,7 +7,7 @@ app = Flask(__name__)
 english_bot = ChatBot("English Bot", 
                      storage_adapter = "chatterbot.storage.MongoDatabaseAdapter",
                      database = "karanbot",
-                     database_uri = MONGODB_URI)
+                     database_uri = "mongodb://karan:Karan@30apr@ds133077.mlab.com:33077/karanbot")
 
 english_bot.set_trainer(ChatterBotCorpusTrainer)
 english_bot.train("chatterbot.corpus.english")
